@@ -45,7 +45,7 @@ yuklenmis olur
          */
         String b = i2.toString();
 //        System.out.println(i1); //:0
-        System.out.println(i2);//:null
+//        System.out.println(i2);//:null
         /*
         butun datatipler ucun wrapper typelar var
          */
@@ -91,12 +91,72 @@ bas verir
 
         Integer h1 = 120;
         Integer h2 = 127;
-        System.out.println(f1==f2);//burda referance ferqlidir : false
-        System.out.println(d1==d2);//burda ise bilirik ki referanc eynidir (autoboxinge gore):true
-        System.out.println(z1==z2); //burda da referanceler ferqlidir
-        System.out.println(h1==h2); //burda da referanceler ferqlidir cunki deyerler eyni deyil
 
-    }
+
+        /// ///////////////////////////////////////
+        Integer x1 = new Integer(4);
+        Integer x2 = new Integer(4);
+        /*
+         bir teref primitiv olanda obyekt olan teref avtomatik olaraq unboxing edir ve obyektin deyeri onun
+         yerini alir
+         */
+        System.out.println(x1.intValue()==x2); //:true
+        System.out.println(4==x2); // true
+        /*bu sekilde de eyni emeliyyati apara bilerik. Java int-i yersiz kimi gorur. 1-i ucun istifade edende
+        ise int-i gorur
+         */
+//        System.out.println((int)x1 == (int)x2);
+//
+//        String nam1 = new String("Khan");
+//        String nam2 = new String("Khan");
+//        System.out.println(nam2==nam1);
+        //textlerini muqayise etsek
+//        System.out.println(nam1.equals(nam2));//true
+
+        /* bele bir obyekt yaratsaq. Bu zaman java yoxlayir. Eger bu adda obyekt varsa diger obyektlerin hash
+        codelari bir birine beraber olur. Yeni ikisi bir yerde bir obyekt olur
+         */
+//        String nam1 = new String("Khan");/*
+//        bele bir sey de var ki biz bu 3-nu yazdigimi zaman cemi 2 obyekt yaranmis olur . Bir bu, qalani da asagidaki
+//        diger 2-si.
+//        */
+        // bu ikisin hash code-u eynidir. Bu ikisi string pool -a gedir.
+//        String nam2 = "Khan";
+//        String nam3 = "Khan";
+        //baxsaq gorerik ki eyni yaddasdadirlar
+//        System.out.println(nam2==nam3);//true
+
+        /*
+        yox eger sadece asagindakindan istifade etsek yaddasda 2 obyekt yaranir . Bir String obyekti ve bir de
+        "khan" deyerinden ibaret basqa bir obyekt. Bunu obyekt yarandiqda original parametrinin hash code-una ve
+        bu obyektin hash coduna baxanda gorebilerik. Kodlar ferqli olacaq. Demeli 2 obyekt yaranib. Ilk yaranan
+        Khan ucun obyekt (originala baxanda gorururuk) daha sonra ise nam1 obyekti (nam1-e baxanda goruruk)
+         */
+
+        String nam1 = new String(
+                "Khan" //:685325104
+        );//:460141958
+
+        //integeri stringe cevirmek ucun
+        int a = 9;
+        String mystr = a+ "";
+        String mystr1 = 9+ "";
+        String metStr = String.valueOf(a);
+        //stringi integere cevirmek ucun
+        int  i = Integer.parseInt("4");
+
+
+
+
+
+
+
+//        System.out.println(f1==f2);//burda referance ferqlidir : false
+//        System.out.println(d1==d2);//burda ise bilirik ki referanc eynidir (autoboxinge gore):true
+//        System.out.println(z1==z2); //burda da referanceler ferqlidir
+//        System.out.println(h1==h2); //burda da referanceler ferqlidir cunki deyerler eyni deyil
+
+        }
 
 
 
