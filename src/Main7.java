@@ -32,6 +32,7 @@ public class Main7 {
         others2.address = "London";
         others2.height = 192;
         others2.number = 2002;
+
         /*
          iki classda yer tutmayan obyekt deyisenlerini bir birine beraber etsek deyerler uygun
          olaraq menimsedilecek
@@ -67,15 +68,15 @@ public class Main7 {
         deyiseni goturerek onun deyerini deyise bilirik. Yeni bu yeni bir classdan kenar deyisen yaratmir.
         sadece bu deyiseni classin yaddasindan goturub ona deyer verir
          */
-//        others.surname = "como estas";
+        others.surname = "como estas";
 //        System.out.println(others.surname); //: como estas
 //        System.out.println(Student.surname); //: como estas
-
-        //print edib baxsaq
-
-//        System.out.println(others.address);
-//        System.out.println(others.height);
-//        System.out.println(others.number);
+//
+//        //print edib baxsaq
+//
+//        System.out.println(others.address);//:Baku
+//        System.out.println(others.height);//:181
+//        System.out.println(others.number);//:2000
 
         //yeni bu sekilde artiq cagira bilmerik
 //        System.out.println(Student.address);
@@ -88,29 +89,32 @@ public class Main7 {
 //        System.out.println(Student.name); // : hello
 //        change();
 //        System.out.println(Student.name); // : bonsua
-//
+////
 //        System.out.println(Student.surname); // : wassup
 //        System.out.println(Student.age); // : 27
 
-    //metodumuzu istifade ederek yeni obyekt yaradaq
-    // Classlar ancaq classin oz metodlarini istifae ede biler gorsenir.
-    // Elece de obyekt metodlari, ancaq obyekt metodlarini istifade ede biler
-//    Student obj_by_method = Student.TakeAndGiveBack();
-    //ve deyerlerimize baxaq
+    /*
+    metodumuzu istifade ederek yeni obyekt yaradaq
+     Classlar ancaq classin oz metodlarini istifae ede biler gorsenir.
+     Elece de obyekt metodlari, ancaq obyekt metodlarini istifade ede biler
+    */
+//        Student obj_by_method = Student.TakeAndGiveBack();
+//    //ve deyerlerimize baxaq
 //        System.out.println(obj_by_method.number);//:2003
 //        System.out.println(obj_by_method.address);//:Dublin
 //        System.out.println(obj_by_method.height);//:185
 
         //public olmayan classin istifadesi
-//        Homies.PrintSome();
+//        Homies.PrintSome();//:Hello bitches
         //obyektden static deyerin deyisdirilmesi
-//        Student s = new Student();
+        Student s = new Student();
         /*
-        gorunduyu altindan xett cekir. yeni deyir ki bu attribute staticdir (eyrilik static oldugunu gosterir.Bu
+        gorunduyu kimi altindan xett cekir. yeni deyir ki bu attribute staticdir (eyrilik static oldugunu gosterir.Bu
         hem classda hem de obyetke bas verir)
 
          */
-//        s.surname = "hiiii guysss";
+        s.surname = "hiiii guysss";
+//        System.out.println(s.surname);
 
 
         /*
@@ -124,10 +128,10 @@ public class Main7 {
         Student a = new Student();//a:Student@543
         Student b = ClassChange(a);//:b:Student@543 a:Student@543
         b.name = "NewMan";
-        System.out.println(a);
-        System.out.println(b);
-        System.out.println(a.name); //NewMan
-        System.out.println(b.name); //NewMan
+//        System.out.println(a);//: Student@1b6d3586
+//        System.out.println(b);//: Student@1b6d3586
+//        System.out.println(a.name); //NewMan
+//        System.out.println(b.name); //NewMan
 
 
         /*

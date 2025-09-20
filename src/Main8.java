@@ -18,7 +18,7 @@ public class Main8 {
         Student s = new Student();
         s.number = 4;
 //        fooObj(s);
-//        System.out.println(s.number);
+//        System.out.println(s.number);//:5
         ///
         /*
          yox eger metodda yeni bir obyekt yaratsaq (gonderdiyimiz referansdan istifade ederek hansi ki "s" -dir)
@@ -36,8 +36,7 @@ Bunu etdiyimiz zaman her iki obyekt eyni referance-a baxir
 //        System.out.println(s.number); //: 5
 //        System.out.println(ss.number);//: 5
 /*
-indi ise fooNew-daki metodda yeni obyekt yaradaq ve eyni kodun neticesine baxaq
-Burada ise daha ferqli proses gedir. 535 referancli s obyektini bu metoda gonderirik amma icerisinde
+Burada ise daha ferqli proses gedir. 535 referancli s obyektini NewExtrFoo adli metoda gonderirik amma icerisinde
 yeni bir obyekt yaradiriq hansi ki 536 referanclidi (yeni 535 referansli s obyektinde hec bir deyisiklik etmirik
 Ve hemin obyektin number attribute-na deyer veririk ve hemin obyekti (536) obyeki return edirik. Bu zaman ss
 obyektinin referansi 536-a beraber olur. Yeni bu iki obyekt eyni referanci bolusur. S obyektinde hec bir deyisiklik

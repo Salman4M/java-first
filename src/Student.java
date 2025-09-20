@@ -55,8 +55,10 @@ deyek ki ikisinin de height-i 180 di. Bir biri ile elaqesizdirler). Yeni deyer d
         ayrica olaraq static metodda static olmayan obyektin attribute-ni  cagira bilmerik
         (amma eksini edebilerik)
         Non-static field 'height' cannot be referenced from a static context
-        System.out.println(height);
-         */
+        */
+
+//        System.out.println(height);
+
 
         return new_obj;
     }
@@ -68,11 +70,11 @@ deyek ki ikisinin de height-i 180 di. Bir biri ile elaqesizdirler). Yeni deyer d
 //    public static Student a = new Student();
 //
 //
-//    public static void main(String[] args){
+    public static void main(String[] args){
 //        Student.s = new Student();
 //        Student.s.number = 5;
 //        System.out.println(Student.s.number);
-//    }
+    }
 /*
 bele bir sey yoxlayaq.Static olmayan obyekt yaradaq ve bunu main9-da istifade etmeye calisaq
  */
@@ -84,34 +86,35 @@ color adinda private deyisen yaradaq (chvet rus dilindedir)
  */
     private String color;
 
-//    public void SetColor(String chvet){
-//        //burada color deyisenini gorur ve ona userden gelecek chvet parametrinin deyerini oturecek
-//        color = chvet;
-//    }
+    public void SetColor(String chvet){
+        //burada color deyisenini gorur ve ona userden gelecek chvet parametrinin deyerini oturecek
+        color = chvet;
+    }
     //bu metodun sayesinde private attribute-u gore bilerik
 
-//    public String GetColor(){
-//        return color;
-//    }
+    public String GetColor(){
+        return color;
+    }
 /*
 indi ise parametrin adini deyisek ve deyisenin adi ile eyni edek. Bu zaman ise deyiseni gormeyecek.
 Burada sanki metod oz parametrini parametrin ozune beraber edir.Bunu aradan qaldirmaq ucun ise "this"
 keywordundan istifade edeceyik
  */
-//    public void SetColor2(String color){
-//        color = color;
-//        //artiq deyiseni gorur ve casmir
-//        this.color = color;
-//    }
+    public void SetColor2(String color){
+        color = color;
+
+        //artiq deyiseni gorur ve casmir
+        this.color = color;
+    }
 /*
 bu metodu yazmaqda meqsedim voidle return-nun istifadesidir. Ancaq bele bir halda yeni metodu dayandirmaq ucun
  */
-//    public void Something(){
-//        if(5<3){
-//            return;
-//        }
-//        color = "black";
-//    }
+    public void Something(){
+        if(5<3){
+            return;
+        }
+        color = "black";
+    }
 /*
 indi ise getter setter deleter metodlarina baxaq
 getteri sectik ve her 3 attribute ucun yaratti
@@ -145,6 +148,8 @@ getteri sectik ve her 3 attribute ucun yaratti
         this.address = address;
         return this;
     }
+
+
 
 
     //
@@ -235,56 +240,70 @@ setColor metodlarini birdefeye obyekt yaradarken istifade edek (Main9-da)
          */
 //        System.out.println("Student");
         //yox eger metodun ozunde count deyiseni teyin etsek nece olar
-        int count = 0;
+//        int count = 0;
         count++;
     }
-    /*
-    indi ise class attribute-u yaradaq ve her defe yuxaridaki metodda artirmaqa calisaq ve main9 proqraminda
-    yeni obyekt yaradib hemin attribute-u cagirmaga calisaq
-     */
-//    public static int count;
-    /*
-    indi ise instance attribute kimi oturek
-     */
+//    /*
+//    indi ise class attribute-u yaradaq ve her defe yuxaridaki metodda artirmaqa calisaq ve main9 proqraminda
+//    yeni obyekt yaradib hemin attribute-u cagirmaga calisaq
+//     */
+//       public static int count;
+//    /*
+//    indi ise instance attribute kimi oturek
+//     */
     public int count;
-    // eyni adli metod yaratdiq ,amma icerisine parametr verdik deye artiq o ferqli metod sayilir
+
+//    // eyni adli metod yaratdiq ,amma icerisine parametr verdik deye artiq o ferqli metod sayilir
     public Student (int number){
         this.number = number;
     }
-    //indi ise constructor funksiyasi ile avtomatik yaradaq (construktorun adi classin adi ile eyni olmalidir)
-    /*
-    iki constructor yaradaq . Biri height ve number digerinde ise bu metodu istifade edek ve elave
-    olaraq address istifade edek.
-    Biz bu metodu digerinde istifade etmek ucun this keywordundan istifade edirik.
-    Onun ucun biz this- in icerisine istediyimiz metodun deyisenlerini otururuk ki onun tanisin.(this-in
-    hansi method oldugunu gormek ucun ctrl-i basili tutub cursoru uzerine getirerek click etmek kifayetdir)
-     */
-    /*
-    indi ise 3lu konstruktor istifade edirik. 2-ci student methodu addressi-i 1-ci metoddan alir ve
-    3 cu metoda oturur. Her ucunun sonuna println -da bir sey elave edek ve gorek ne print olununr
-     */
+//    //indi ise constructor funksiyasi ile avtomatik yaradaq (construktorun adi classin adi ile eyni olmalidir)
+//    /*
+//    iki constructor yaradaq . Biri height ve number digerinde ise bu metodu istifade edek ve elave
+//    olaraq address istifade edek.
+//    Biz bu metodu digerinde istifade etmek ucun this keywordundan istifade edirik.
+//    Onun ucun biz this- in icerisine istediyimiz metodun deyisenlerini otururuk ki onun tanisin.(this-in
+//    hansi method oldugunu gormek ucun ctrl-i basili tutub cursoru uzerine getirerek click etmek kifayetdir)
+//     */
+//    /*
+//    indi ise 3lu konstruktor istifade edirik. 2-ci student methodu addressi-i 1-ci metoddan alir ve
+//    3 cu metoda oturur. Her ucunun sonuna println -da bir sey elave edek ve gorek ne print olununr
+//     */
+    public int hero ;
     public Student(String address){
-        this.address =address;
-        System.out.println("1");
+        this.hero = hero;
+        this.address = address;
+//        System.out.println("1");
     }
 
     public Student(int height, int number) {
         this("Xizi");
+//        this(address);
         //bu ikisini 3lu konstruktorda bir seyi yoxlamaq ucun commente aliriq
 //        this.height = height;
-//        this.number = number;
-        System.out.println("2");
+        this.number = number;
+//        System.out.println("2");
 
+    }
+
+    public Student(int number, int height, String address,Boolean hello) {
+//        this(number,address);
+//        this(address,hero);
+        //usdekini bu sekilde de yazabilerik eger default deyer vermek isteyirikse
+//        this(0,0);
+//        this.address = address;
+//        System.out.println("3");
     }
 
     public Student(int number, int height, String address) {
-//        this(height,number);
+//        this(2,3,"hello",true);
+//        this(address,hero);
         //usdekini bu sekilde de yazabilerik eger default deyer vermek isteyirikse
-        this(0,0);
+//        this(0,0);
 //        this.address = address;
-        System.out.println("3");
-
+//        System.out.println("3");
     }
+
     //elave olaraq this ile obyekte aid olan metodu da istifade etmek mumkundur
     /*
     misal ucun getAddress(). Bunu this istifade etmeden getAddress kimi de yazmaq mumkundur amma ki yene de ad
@@ -295,7 +314,7 @@ setColor metodlarini birdefeye obyekt yaradarken istifade edek (Main9-da)
 
     public void foo(){
         this.getAddress();
-        this.number =number;
+        this.number = number;
     }
 /*
 biz burada 4 eded Student adli Construktor yaratmisiq. Yeni biz onu yaratmasaq bele o artiq yaddasda var. Saadece

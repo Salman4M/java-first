@@ -10,10 +10,10 @@ Static obyekt oldugu ucun metodun icerisinde onu cagiranda aid oldugu classin ad
 ////ve ya
 //    public static Student a = new Student();
 //
-    public static void main(String[] args){
-//        Student s = new Student();
+    public static void main(String[] args) {
+//        Student.s = new Student();
 //        Main9.s.number = 5;
-//        System.out.println(Main9.s.number);
+//        System.out.println(Main9.s.number);//:5
 /*
     hemin o static olmayan obyekti cagiraq bu zaman sonsuz dovre giririk cunki Student s obyektinin ozu bir obyekte
     beraberdir ve obyektin ozunu istifade edib obyekt yaratmaga calisanda bu artiq StackOverFlow erroru alir
@@ -26,57 +26,58 @@ Obyektlerden ibaret massive yaradiriq Student tipinde ve  3 obyekt yaradiriq
  */
 //        Student[] s = new Student[3];
 ////     Massive yarananda arxada o massivin tipinde olan bir classin obyekti yaranir. Onu da gormek ucun
-////        s.getClass().getName(); //:[LStudent;
-////        s[0] = new Student();
-////        s[0].number = 4;
-////        s[1] = new Student();
-////        s[1].number = 5;
-////        s[2] = new Student();
-////        s[2].number = 6;
-////        System.out.println(s[0].number);
-////        System.out.println(s[0].number);
-////        System.out.println(s[0].number);
-//
-////indi bele bir sey edek
+//        s.getClass().getName(); //:[LStudent;
+//        s[0] = new Student();
+//        s[0].number = 4;
+//        s[1] = new Student();
+//        s[1].number = 5;
+//        s[2] = new Student();
+//        s[2].number = 6;
+//        System.out.println(s[0].number);//:4
+//        System.out.println(s[1].number);//:5
+//        System.out.println(s[2].number);//:6
+
+//indi bele bir sey edek
 //        Student s1 = new Student();
 //        Student s2 = new Student();
 //        Student s3 = new Student();
 //
 //        s[0]=s1; // s1-in ref-i her ikisine aid olmus olur. Ona gore birinde bas vermis deyisiklik her ikisine aiddir
-//        s[0].age=5;
+//        s[0].number=5;
 //        s[1]=s2; // bunda da eyni
-//        s[1].age=6;
+//        s[1].number=6;
 //        s[2]=s3; // bunda da eyni
-//        s[2].age=7;
-////        System.out.println(s[0].age); //:5
-////        System.out.println(s1.age);   //:5
-////        System.out.println(s3.age);   //:7
-///*
+//        s[2].number=7;
+//        System.out.println(s[0].number); //:5
+//        System.out.println(s1.number);   //:5
+//        System.out.println(s3.number);   //:7
+/*
 //encapsulation
 // */
 //        Student newColor = new Student();
-////        newColor.SetColor("yasil");
-////bu sekilde deyeri gore bilmerik ,cunki o private-dir. onun ucun de student classinda bir method yazaq
-////        System.out.println(newColor.GetColor()); // yasil
+//        newColor.SetColor("yasil");
+//bu sekilde deyeri gore bilmerik ,cunki o private-dir. onun ucun de student classinda bir method yazaq
+//        System.out.println(newColor.GetColor()); // yasil
 //
-//        /*
-//        eyni anda metodlari istifade etmezden emin olmaq lazimdir ki onlarin hecbirinde void istifade olunmuyub
-//        eks halda error alinacaq (esasen bu private attributelar ucun nezerde tutulub)
-//         */ //bunun adi fluentdir
+        /*
+        eyni anda metodlari istifade etmezden emin olmaq lazimdir ki onlarin hecbirinde void istifade olunmuyub
+        eks halda error alinacaq (esasen bu private attributelar ucun nezerde tutulub)
+        */
+//      bunun adi fluentdir
 //        Student newOne = new Student().setColor("black").setHeight(3000).setNumber(5);
 //        //ve ya . Bu usulun adi builder pattern -dir
-////        System.out.println(new Student().setColor("pink").setHeight(2000).setNumber(9));
+//        System.out.println(new Student().setColor("pink").setHeight(2000).setNumber(9));
 //        /*
 //        obyektin icerisinde obyekt yaratdiq .Bunun adi Composition
 //         */
-//        University university= new University().setName("BMU").setAddress("Xirdalan");
+//        University university = new University().setName("BMU").setAddress("Xirdalan");
 //        newOne.setUniversity(university);
-//        System.out.println(newOne.getUniversity().getClass());
+//        System.out.println(newOne.getUniversity().getClass()); //: class University
 
         //bir nece defe cagiraq ve gorek ne bas verir
-//        new Student(); // :Student
-//        new Student(); // :Student
-//        new Student(); // :Student
+//            new Student(); // :Student
+//            new Student(); // :Student
+//            new Student(); // :Student
         /*
         cavab 3 olacaq cunki bu bir class attribute-dur ve her defe yenisini yaratmaq evezine ozunde 1 dene count
         attribute-unu saxlayir ve normal olaraq yeni deyeri uzerine gelir
@@ -87,8 +88,8 @@ Obyektlerden ibaret massive yaradiriq Student tipinde ve  3 obyekt yaradiriq
 //        Student s1 = new Student();
 //        Student s2 = new Student();
 //        Student s3 = new Student();
-//        System.out.println(s3.count);
-        //eyni adli metod istifade etdik amma parametr teleb edir
+//        System.out.println(s3.count);//:1
+////        eyni adli metod istifade etdik amma parametr teleb edir
 //        Student s4 = new Student(1133);
 //        System.out.println(s1.getNumber());
 //        System.out.println(s4.getNumber());
@@ -105,8 +106,11 @@ Obyektlerden ibaret massive yaradiriq Student tipinde ve  3 obyekt yaradiriq
 // 2
 // 3
 
-    foo1();
-    }
+//    foo1();
+//        Student s7 = new Student(5,3,"Kyoto");
+//        System.out.println(s7.hero);//:5
+//        System.out.println(s7.number);//:0
+//    }
 
     /*
     basqa bir usulla gostersek. Burda ise metodlar bir birini gozleyir. foo1-de foo2ni cagiririq deye foo2-i foo1-in
@@ -114,19 +118,38 @@ Obyektlerden ibaret massive yaradiriq Student tipinde ve  3 obyekt yaradiriq
     ve foo1 seklinde olur. Bu sebebden 3,2,1 seklinde olacaq
      */
 
-    public static void foo1(){
-        foo2();
-        System.out.println("1");
-    }
-    public static void foo2() {
-        foo3();
-        System.out.println("2");
-    }
-    public static void foo3(){
-        System.out.println("3");
-    }
+//    public static void foo1(){
+//        foo2();
+//        System.out.println("1");
+//    }
+//    public static void foo2() {
+//        foo3();
+//        System.out.println("2");
+//    }
+//    public static void foo3(){
+//        System.out.println("3");
+//    }
 
+    }
+//    //overload anlayisi
+//    /*
+//     eger eyni adli metodlarimiz varsa ve her ikisinde void ve ya return istifade olunubsa ve metodlardan biri
+//     parametr teleb edirse bu overload sayilir. Esas faktor burada parametrin olmasidir. Return typein hec bir
+//     onemi yoxdur. Biz artiq bunu constructorlardan bilirik
+//
+//     */
+    public static void foo5(){
 
+    }
+    public static int foo5(int a){
+        return 5;
+    }
+    //ikisi de return etmiyen halda
+       public static void foo6(){
+//
+    }
+    public static void foo6(int a){
+    }
 
 
 }
