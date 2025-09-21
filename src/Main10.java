@@ -100,23 +100,23 @@ bas verir
          bir teref primitiv olanda obyekt olan teref avtomatik olaraq unboxing edir ve obyektin deyeri onun
          yerini alir
          */
-        System.out.println(x1.intValue()==x2); //:true
-        System.out.println(4==x2); // true
+//        System.out.println(x1.intValue()==x2); //:true
+//        System.out.println(4==x2); // true
         /*bu sekilde de eyni emeliyyati apara bilerik. Java int-i yersiz kimi gorur. 1-i ucun istifade edende
         ise int-i gorur
          */
-//        System.out.println((int)x1 == (int)x2);
+//        System.out.println((int)x1 == x2);//:true
 //
 //        String nam1 = new String("Khan");
 //        String nam2 = new String("Khan");
 //        System.out.println(nam2==nam1);
-        //textlerini muqayise etsek
+////        textlerini muqayise etsek
 //        System.out.println(nam1.equals(nam2));//true
 
         /* bele bir obyekt yaratsaq. Bu zaman java yoxlayir. Eger bu adda obyekt varsa diger obyektlerin hash
         codelari bir birine beraber olur. Yeni ikisi bir yerde bir obyekt olur
          */
-//        String nam1 = new String("Khan");/*
+        String nam1 = new String("Khan");/*
 //        bele bir sey de var ki biz bu 3-nu yazdigimi zaman cemi 2 obyekt yaranmis olur . Bir bu, qalani da asagidaki
 //        diger 2-si.
 //        */
@@ -133,9 +133,9 @@ bas verir
         Khan ucun obyekt (originala baxanda gorururuk) daha sonra ise nam1 obyekti (nam1-e baxanda goruruk)
          */
 
-        String nam1 = new String(
-                "Khan" //:685325104
-        );//:460141958
+//        String nam1 = new String(
+//                "Khan" //:685325104
+//        );//:460141958
 
         //integeri stringe cevirmek ucun
         int a = 9;

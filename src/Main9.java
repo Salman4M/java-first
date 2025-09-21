@@ -64,14 +64,16 @@ Obyektlerden ibaret massive yaradiriq Student tipinde ve  3 obyekt yaradiriq
         eks halda error alinacaq (esasen bu private attributelar ucun nezerde tutulub)
         */
 //      bunun adi fluentdir
-//        Student newOne = new Student().setColor("black").setHeight(3000).setNumber(5);
+        Student newOne = new Student().setColor("black").setHeight(3000).setNumber(5);
 //        //ve ya . Bu usulun adi builder pattern -dir
 //        System.out.println(new Student().setColor("pink").setHeight(2000).setNumber(9));
 //        /*
 //        obyektin icerisinde obyekt yaratdiq .Bunun adi Composition
 //         */
-//        University university = new University().setName("BMU").setAddress("Xirdalan");
-//        newOne.setUniversity(university);
+        University university = new University().setName("BMU").setAddress("Xirdalan");
+        newOne.setUniversity(university);
+        System.out.println(newOne.getAddress());
+        System.out.println(newOne.getUniversity().getAddress());
 //        System.out.println(newOne.getUniversity().getClass()); //: class University
 
         //bir nece defe cagiraq ve gorek ne bas verir
