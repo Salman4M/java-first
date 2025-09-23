@@ -324,4 +324,22 @@ qalacagiq. Cunki java bunu override kimi basa dusur. Senin artiq parametrli cons
 
  */
 
+    //static
+    static {
+        System.out.println("this is your captain speaking");
+        System.out.println("Student class has been downloaded");
+    };
+    //object
+    {
+        //bu block sadece obyekt yarandigi zaman ise dusur
+        //bunu yazaq ve 3 defe classi cagiraq gorek ne bas verir
+        System.out.println("object has been created");
+    }
+
+    //bele bir metod yazaq ve onu cagiraq
+
+    public static void foo2(){
+
+    }
+
 }
